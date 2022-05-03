@@ -12,6 +12,26 @@ This was given to Foone Turing by a programmer who wishes to remain anonymous, b
 
 Approval to open source this was given in an email from Jez San, former CEO of Argonaut. 
 
+## Credits
+
+| Role          | Name           | 
+| ------------- | -------------  |
+| Programming   | `Sam Littlewood` `Dan Piponi` `Simon Everett` `Philip Pratt` |
+| Ports         | `Simon Everett` `Philip Pratt` `Patrick Buckland` `Zareh Johannes`  `Anthony Savva` `Stainless Software Ltd`    |
+| Testing       | `Philip Pratt`  |
+| Project Management | `Stefano Zammattio` |
+| Technical Reference Manual | `Crosbie Fitch` `Philip Pratt` |
+| Tutorial & Installation Guides | `Robbie McQuaid` | 
+| Marketing | `Paul Ayscough` `Mitra Faulkner` |
+| Sales | `Edwin Masterson` |
+| Artwork| `Michel Bowes` |
+| Technical Support | `Neela Dass` `Tony Roberts` `John Gay` |
+| With Thanks to | `Pete Warnes` `Mike Day` `Tim Gummer` `Vinay Gupta` `Marcia Petterson` `Jez San` | 
+
+(From the 1996 Technical Reference Manual. More names will be added if they are uncovered)
+
+The open sourcing of this version was done by Scott Hanselman and Foone Turing, with help from an anonymous contributor. 
+
 ## License
 
 This is released under the MIT license.
