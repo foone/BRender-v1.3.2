@@ -1,6 +1,6 @@
 # Argonaut Blazing Render (BRender)
 
-This is the source code to version 1.3.2 of the BRender engine by Argonaut Software/Argonaut Games, from aproximately 1998/11/17.
+This is the source code to version 1.3.2 of the BRender engine by Argonaut Software/Argonaut Games, from approximately 1998/11/17.
 
 This is intended as a basic release to let others build on, and more info on how to build and use this code will be added later.
 
