@@ -1,4 +1,17 @@
-MIT License
+# Argonaut Blazing Render (BRender)
+
+This is the source code to version 1.3.2 of the BRender engine by Argonaut Software/Argonaut Games, from aproximately 1998/11/17.
+
+This is intended as a basic release to let others build on, and more info on how to build and use this code will be added later.
+
+## Approval to open source this software
+
+Approval to open source this was given in an email from Jez San, former CEO of Argonaut. 
+
+## License
+
+This is released under the MIT license.
+
 
 Copyright (c) 1998 Argonaut Software Limited 
 
