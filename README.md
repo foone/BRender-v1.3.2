@@ -4,6 +4,8 @@ This is the source code to version 1.3.2 of the BRender engine by Argonaut Softw
 
 This is intended as a basic release to let others build on, and more info on how to build and use this code will be added later.
 
+See also [the release of a 1997 version of the BRender engine](https://github.com/foone/BRender-1997).
+
 ## Source of this code
 
 This was given to Foone Turing by a programmer who wishes to remain anonymous, based on a game project that had licensed BRender for use.
