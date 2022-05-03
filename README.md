@@ -25,7 +25,7 @@ Approval to open source this was given in an email from Jez San, former CEO of A
 | Marketing | `Paul Ayscough` `Mitra Faulkner` |
 | Sales | `Edwin Masterson` |
 | Artwork| `Michel Bowes` |
-| Technical Support | `Neela Dass` `Tony Roberts` `John Gay` |
+| Technical Support | `Neela Dass` `Tony Roberts` `John Gay` `Jon Wolff` |
 | With Thanks to | `Pete Warnes` `Mike Day` `Tim Gummer` `Vinay Gupta` `Marcia Petterson` `Jez San` | 
 
 (From the 1996 Technical Reference Manual. More names will be added if they are uncovered)
