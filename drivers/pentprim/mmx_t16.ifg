@@ -1,0 +1,77 @@
+# List of primitives, processed by infogen.pl 
+#
+
+## Perspective (using the general subdivision mechanism)
+##
+[mmx, rgb565, triangle, pixel_stride=4, perspective_subdivide, texture, texture_index8_palette, texture_power2, texture_stride_positive]
+
+# Texture, gouraud,
+#
+mmx:RasteriseMMX565_Z_UV_RGB_SD     = [generic_setup=ZRGBUVS_A, parameter_struct=param_zrgbuv, interpolated_colour, constant_alpha, colour7bit, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_RGB_S      = [generic_setup=ZRGBUVS_A, parameter_struct=param_zrgbuv, interpolated_colour, constant_alpha, colour7bit, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_RGB_D      = [generic_setup=ZRGBUV_A,  parameter_struct=param_zrgbuv, interpolated_colour, colour7bit, dithered]
+mmx:RasteriseMMX565_Z_UV_RGB        = [generic_setup=ZRGBUV_A,  parameter_struct=param_zrgbuv, interpolated_colour, colour7bit]
+
+# Texture, flat
+#
+mmx:RasteriseMMX565_Z_UV_C_SD       = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, constant_alpha, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_C_S        = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, constant_alpha, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_C_D        = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, dithered]
+mmx:RasteriseMMX565_Z_UV_C          = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour]
+
+# Texture
+#
+mmx:RasteriseMMX565_Z_UV_SD         = [generic_setup=ZUVC_A,   parameter_struct=param_zuv, constant_alpha, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_S          = [generic_setup=ZUVC_A,   parameter_struct=param_zuv, constant_alpha, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_D          = [generic_setup=ZUV_A,   parameter_struct=param_zuv, dithered]
+mmx:RasteriseMMX565_Z_UV            = [generic_setup=ZUV_A,   parameter_struct=param_zuv]
+
+## Linear
+##
+[mmx, rgb565, triangle, pixel_stride=4, texture, texture_index8_palette,texture_power2, texture_stride_positive]
+
+# Texture, gouraud,
+#
+mmx:RasteriseMMX565_Z_UV_RGB_SD     = [generic_setup=ZRGBUVS_A, parameter_struct=param_zrgbuv, interpolated_colour, constant_alpha, colour7bit, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_RGB_S      = [generic_setup=ZRGBUVS_A, parameter_struct=param_zrgbuv, interpolated_colour, constant_alpha, colour7bit, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_RGB_D      = [generic_setup=ZRGBUV_A,  parameter_struct=param_zrgbuv, interpolated_colour, colour7bit, dithered]
+mmx:RasteriseMMX565_Z_UV_RGB        = [generic_setup=ZRGBUV_A,  parameter_struct=param_zrgbuv, interpolated_colour, colour7bit]
+
+# Texture, flat
+#
+mmx:RasteriseMMX565_Z_UV_C_SD       = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, constant_alpha, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_C_S        = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, constant_alpha, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_C_D        = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour, dithered]
+mmx:RasteriseMMX565_Z_UV_C          = [generic_setup=ZUVC_A,  parameter_struct=param_zuv, constant_colour]
+
+# Texture
+#
+mmx:RasteriseMMX565_Z_UV_SD         = [generic_setup=ZUVC_A,   parameter_struct=param_zuv, constant_alpha, dithered, screendoor]
+mmx:RasteriseMMX565_Z_UV_S          = [generic_setup=ZUVC_A,   parameter_struct=param_zuv, constant_alpha, screendoor]
+
+mmx:RasteriseMMX565_Z_UV_D          = [generic_setup=ZUV_A,   parameter_struct=param_zuv, dithered]
+mmx:RasteriseMMX565_Z_UV            = [generic_setup=ZUV_A,   parameter_struct=param_zuv]
+
+[mmx, rgb565, triangle, pixel_stride=4]
+
+# Gouraud
+#
+mmx:RasteriseMMX565_Z_RGB_SD        = [generic_setup=ZRGBS_A, parameter_struct=param_zrgb, interpolated_colour, constant_alpha, dithered, screendoor]
+mmx:RasteriseMMX565_Z_RGB_S         = [generic_setup=ZRGBS_A, parameter_struct=param_zrgb, interpolated_colour, constant_alpha, screendoor]
+
+mmx:RasteriseMMX565_Z_RGB_D         = [generic_setup=ZRGB_A,  parameter_struct=param_zrgb, interpolated_colour, dithered, ]
+mmx:RasteriseMMX565_Z_RGB           = [generic_setup=ZRGB_A,  parameter_struct=param_zrgb, interpolated_colour]
+
+# Flat
+#
+mmx:RasteriseMMX565_Z_RGB_SD        = [generic_setup=ZRGBS_A, parameter_struct=param_zrgb, constant_colour, constant_alpha, dithered, duplicate, screendoor]
+mmx:RasteriseMMX565_Z_RGB_S         = [generic_setup=ZRGBS_A, parameter_struct=param_zrgb, constant_colour, constant_alpha, duplicate, screendoor]
+
+mmx:RasteriseMMX565_Z_RGB_D         = [generic_setup=ZRGB_A,  parameter_struct=param_zrgb, constant_colour, dithered, duplicate]
+mmx:RasteriseMMX565_Z_RGB           = [generic_setup=ZRGB_A,  parameter_struct=param_zrgb, constant_colour, duplicate]
+

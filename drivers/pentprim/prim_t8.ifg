@@ -1,0 +1,424 @@
+# List of primitives, processed by infogen.pl 
+#
+
+#########################################
+#########################################
+# Z buffered																										 
+#########################################
+#########################################
+
+#########################################
+#Fogged Blended Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+sftizfb:TriangleRender_ZPTIFB_I8_D16_1024 = [z_buffered, triangle, index8, interpolated_intensity, texture1024x1024, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTIFB_I8_D16_1024_FLAT = [z_buffered, triangle, index8, constant_intensity, texture1024x1024, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTFB_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024, perspective, fog, blend_table]
+
+sftizfb:TriangleRender_ZPTIFB_I8_D16_256 = [z_buffered, triangle, index8, interpolated_intensity, texture256x256, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTIFB_I8_D16_256_FLAT = [z_buffered, triangle, index8, constant_intensity, texture256x256, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTFB_I8_D16_256 = [z_buffered, triangle, index8, texture256x256, perspective, fog, blend_table]
+
+sftizfb:TriangleRender_ZPTIFB_I8_D16_128 = [z_buffered, triangle, index8, interpolated_intensity, texture128x128, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTIFB_I8_D16_128_FLAT = [z_buffered, triangle, index8, constant_intensity, texture128x128, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTFB_I8_D16_128 = [z_buffered, triangle, index8, texture128x128, perspective, fog, blend_table]
+
+sftizfb:TriangleRender_ZPTIFB_I8_D16_64 = [z_buffered, triangle, index8, interpolated_intensity, texture64x64, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTIFB_I8_D16_64_FLAT = [z_buffered, triangle, index8, constant_intensity, texture64x64, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTFB_I8_D16_64 = [z_buffered, triangle, index8, texture64x64, perspective, fog, blend_table]
+
+sftizfb:TriangleRender_ZPTIFB_I8_D16_32 = [z_buffered, triangle, index8, interpolated_intensity, texture32x32, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTIFB_I8_D16_32_FLAT = [z_buffered, triangle, index8, constant_intensity, texture32x32, perspective, fog, blend_table]
+sftizfb:TriangleRender_ZPTFB_I8_D16_32 = [z_buffered, triangle, index8, texture32x32, perspective, fog, blend_table]
+
+#########################################
+#Fogged Blended (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+sftizfb:TriangleRender_ZTIFB_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture, perspective_subdivide,unscaled_texture_coords, fog, blend_table]
+sftizfb:TriangleRender_ZTIFB_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture, perspective_subdivide,unscaled_texture_coords, fog, blend_table]
+sftizfb:TriangleRender_ZTFB_I8_D16 = [z_buffered,triangle, index8, texture, perspective_subdivide,unscaled_texture_coords, fog, blend_table]
+
+sftizfb:TriangleRender_ZTIFB_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture,unscaled_texture_coords, fog, blend_table]
+sftizfb:TriangleRender_ZTIFB_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture,unscaled_texture_coords, fog, blend_table]
+sftizfb:TriangleRender_ZTFB_I8_D16 = [z_buffered,triangle, index8, texture,unscaled_texture_coords, fog, blend_table]
+
+#########################################
+#Blended Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softizb:TriangleRender_ZPTIB_I8_D16_1024 = [z_buffered, triangle, index8, interpolated_intensity, texture1024x1024, perspective, blend_table]
+softizb:TriangleRender_ZPTIB_I8_D16_1024_FLAT = [z_buffered, triangle, index8, constant_intensity, texture1024x1024, perspective, blend_table]
+softizb:TriangleRender_ZPTB_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024, perspective, blend_table]
+
+softizb:TriangleRender_ZPTIB_I8_D16_256 = [z_buffered, triangle, index8, interpolated_intensity, texture256x256, perspective, blend_table]
+softizb:TriangleRender_ZPTIB_I8_D16_256_FLAT = [z_buffered, triangle, index8, constant_intensity, texture256x256, perspective, blend_table]
+softizb:TriangleRender_ZPTB_I8_D16_256 = [z_buffered, triangle, index8, texture256x256, perspective, blend_table]
+
+softizb:TriangleRender_ZPTIB_I8_D16_128 = [z_buffered, triangle, index8, interpolated_intensity, texture128x128, perspective, blend_table]
+softizb:TriangleRender_ZPTIB_I8_D16_128_FLAT = [z_buffered, triangle, index8, constant_intensity, texture128x128, perspective, blend_table]
+softizb:TriangleRender_ZPTB_I8_D16_128 = [z_buffered, triangle, index8, texture128x128, perspective, blend_table]
+
+softizb:TriangleRender_ZPTIB_I8_D16_64 = [z_buffered, triangle, index8, interpolated_intensity, texture64x64, perspective, blend_table]
+softizb:TriangleRender_ZPTIB_I8_D16_64_FLAT = [z_buffered, triangle, index8, constant_intensity, texture64x64, perspective, blend_table]
+softizb:TriangleRender_ZPTB_I8_D16_64 = [z_buffered, triangle, index8, texture64x64, perspective, blend_table]
+
+softizb:TriangleRender_ZPTIB_I8_D16_32 = [z_buffered, triangle, index8, interpolated_intensity, texture32x32, perspective, blend_table]
+softizb:TriangleRender_ZPTIB_I8_D16_32_FLAT = [z_buffered, triangle, index8, constant_intensity, texture32x32, perspective, blend_table]
+softizb:TriangleRender_ZPTB_I8_D16_32 = [z_buffered, triangle, index8, texture32x32, perspective, blend_table]
+
+###################################################
+#Blended (Arbitrary Width - Perspective subdivide)
+###################################################
+[texture_stride_positive]
+
+softizb:TriangleRender_ZTIB_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture, perspective_subdivide,unscaled_texture_coords, blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture, perspective_subdivide,unscaled_texture_coords, blend_table]
+softizb:TriangleRender_ZTB_I8_D16 = [z_buffered,triangle, index8, texture, perspective_subdivide,unscaled_texture_coords, blend_table]
+
+###########################
+#Blended (Power of 2)
+###########################
+[texture_stride_positive,texture_no_skip]
+softizb:TriangleRender_ZTB_I8_D16_1024_FLAT = [z_buffered, triangle, index8, texture1024x1024, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_256_FLAT = [z_buffered, triangle, index8, texture256x256, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_256 = [z_buffered, triangle, index8, texture256x256,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_256 = [z_buffered, triangle, index8, texture256x256,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_128_FLAT = [z_buffered, triangle, index8, texture128x128, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_128 = [z_buffered, triangle, index8, texture128x128,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_128 = [z_buffered, triangle, index8, texture128x128,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_64_FLAT = [z_buffered, triangle, index8, texture64x64, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_64 = [z_buffered, triangle, index8, texture64x64,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_64 = [z_buffered, triangle, index8, texture64x64,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_32_FLAT = [z_buffered, triangle, index8, texture32x32, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_32 = [z_buffered, triangle, index8, texture32x32,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_32 = [z_buffered, triangle, index8, texture32x32,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_16_FLAT = [z_buffered, triangle, index8, texture16x16, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_16 = [z_buffered, triangle, index8, texture16x16,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_16 = [z_buffered, triangle, index8, texture16x16,blend_table]
+
+softizb:TriangleRender_ZTB_I8_D16_8_FLAT = [z_buffered, triangle, index8, texture8x8, constant_intensity,blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_8 = [z_buffered, triangle, index8, texture8x8,interpolated_intensity,blend_table]
+softizb:TriangleRender_ZTB_I8_D16_8 = [z_buffered, triangle, index8, texture8x8,blend_table]
+
+###########################
+#Blended (Arbitrary Width)
+###########################
+[texture_stride_positive]
+softizb:TriangleRender_ZTIB_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture,unscaled_texture_coords, blend_table]
+softizb:TriangleRender_ZTIB_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture,unscaled_texture_coords, blend_table]
+softizb:TriangleRender_ZTB_I8_D16 = [z_buffered,triangle, index8, texture,unscaled_texture_coords, blend_table]
+
+
+#########################################
+#Fogged Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softizf:TriangleRender_ZPTIF_I8_D16_1024 = [z_buffered, triangle, index8, interpolated_intensity, texture1024x1024, perspective, fog]
+softizf:TriangleRender_ZPTIF_I8_D16_1024_FLAT = [z_buffered, triangle, index8, constant_intensity, texture1024x1024, perspective, fog]
+softizf:TriangleRender_ZPTF_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024, perspective, fog]
+
+softizf:TriangleRender_ZPTIF_I8_D16_256 = [z_buffered, triangle, index8, interpolated_intensity, texture256x256, perspective, fog]
+softizf:TriangleRender_ZPTIF_I8_D16_256_FLAT = [z_buffered, triangle, index8, constant_intensity, texture256x256, perspective, fog]
+softizf:TriangleRender_ZPTF_I8_D16_256 = [z_buffered, triangle, index8, texture256x256, perspective, fog]
+
+softizf:TriangleRender_ZPTIF_I8_D16_128 = [z_buffered, triangle, index8, interpolated_intensity, texture128x128, perspective, fog]
+softizf:TriangleRender_ZPTIF_I8_D16_128_FLAT = [z_buffered, triangle, index8, constant_intensity, texture128x128, perspective, fog]
+softizf:TriangleRender_ZPTF_I8_D16_128 = [z_buffered, triangle, index8, texture128x128, perspective, fog]
+
+softizf:TriangleRender_ZPTIF_I8_D16_64 = [z_buffered, triangle, index8, interpolated_intensity, texture64x64, perspective, fog]
+softizf:TriangleRender_ZPTIF_I8_D16_64_FLAT = [z_buffered, triangle, index8, constant_intensity, texture64x64, perspective, fog]
+softizf:TriangleRender_ZPTF_I8_D16_64 = [z_buffered, triangle, index8, texture64x64, perspective, fog]
+
+softizf:TriangleRender_ZPTIF_I8_D16_32 = [z_buffered, triangle, index8, interpolated_intensity, texture32x32, perspective, fog]
+softizf:TriangleRender_ZPTIF_I8_D16_32_FLAT = [z_buffered, triangle, index8, constant_intensity, texture32x32, perspective, fog]
+softizf:TriangleRender_ZPTF_I8_D16_32 = [z_buffered, triangle, index8, texture32x32, perspective, fog]
+
+#########################################
+#Fogged (Arbitrary Width) Perspecetive Subdivide
+#########################################
+[texture_stride_positive]
+
+softizf:TriangleRender_ZTIF_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture, perspective_subdivide,unscaled_texture_coords, fog]
+softizf:TriangleRender_ZTIF_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture, perspective_subdivide,unscaled_texture_coords, fog]
+softizf:TriangleRender_ZTF_I8_D16 = [z_buffered,triangle, index8, texture, perspective_subdivide,unscaled_texture_coords, fog]
+
+
+#########################################
+#Fogged (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softizf:TriangleRender_ZTIF_I8_D16_256_FLAT = [z_buffered, triangle, index8, texture256x256, constant_intensity, fog]
+softizf:TriangleRender_ZTIF_I8_D16_256 = [z_buffered, triangle, index8, texture256x256,interpolated_intensity, fog]
+softizf:TriangleRender_ZTF_I8_D16_256 = [z_buffered, triangle, index8, texture256x256, fog]
+
+
+#########################################
+#Fogged (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softizf:TriangleRender_ZTIF_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture,unscaled_texture_coords, fog]
+softizf:TriangleRender_ZTIF_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture,unscaled_texture_coords, fog]
+softizf:TriangleRender_ZTF_I8_D16 = [z_buffered,triangle, index8, texture,unscaled_texture_coords, fog]
+
+
+#########################################
+#Untextured Fogged
+#########################################
+[]
+
+softizf:TriangleRender_ZIF_I8_D16 = [z_buffered, triangle, index8, interpolated_intensity, fog]
+softizf:TriangleRender_ZIF_I8_D16_FLAT = [z_buffered, triangle, index8, constant_intensity, fog]
+
+#########################################
+#Decal (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softiz:TriangleRender_ZTID_I8_D16_32 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture32x32]
+softiz:TriangleRender_ZTID_I8_D16_64 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture64x64]
+softiz:TriangleRender_ZTID_I8_D16_128 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture128x128]
+softiz:TriangleRender_ZTID_I8_D16_256 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture256x256]
+softiz:TriangleRender_ZTID_I8_D16_1024 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture1024x1024]
+
+softiz:TriangleRender_ZTID_I8_D16_32_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture32x32]
+softiz:TriangleRender_ZTID_I8_D16_64_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture64x64]
+softiz:TriangleRender_ZTID_I8_D16_128_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture128x128]
+softiz:TriangleRender_ZTID_I8_D16_256_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture256x256]
+softiz:TriangleRender_ZTID_I8_D16_1024_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture1024x1024]
+
+#########################################
+#Decal (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softiz:TriangleRender_ZTID_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, decal,texture,unscaled_texture_coords]
+softiz:TriangleRender_ZTID_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity, decal,texture,unscaled_texture_coords]
+
+#########################################
+#Dithered Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip,image_suffix=]
+softd:TriangleRenderPIZ2TPD1024 = [z_buffered, triangle, index8, texture1024x1024, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD256 = [z_buffered, triangle, index8, texture256x256, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD128 = [z_buffered, triangle, index8, texture128x128, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD64 = [z_buffered, triangle, index8, texture64x64, perspective, dithered_map, fixed_components]
+
+#########################################
+#Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softiz:TriangleRender_ZPTI_I8_D16_1024 = [z_buffered, triangle, index8, interpolated_intensity, texture1024x1024, perspective]
+softiz:TriangleRender_ZPTI_I8_D16_1024_FLAT = [z_buffered, triangle, index8, constant_intensity, texture1024x1024, perspective]
+#softi:TriangleRender_PT_I8_1024 = [z_buffered, triangle, index8, texture1024x1024, perspective,no_depth_write]
+softiz:TriangleRender_ZPT_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024, perspective]
+
+softiz:TriangleRender_ZPTI_I8_D16_256 = [z_buffered, triangle, index8, interpolated_intensity, texture256x256, perspective]
+softiz:TriangleRender_ZPTI_I8_D16_256_FLAT = [z_buffered, triangle, index8, constant_intensity, texture256x256, perspective]
+#softi:TriangleRender_PT_I8_256 = [z_buffered, triangle, index8, texture256x256, perspective,no_depth_write]
+softiz:TriangleRender_ZPT_I8_D16_256 = [z_buffered, triangle, index8, texture256x256, perspective]
+
+softiz:TriangleRender_ZPTI_I8_D16_128 = [z_buffered, triangle, index8, interpolated_intensity, texture128x128, perspective]
+softiz:TriangleRender_ZPTI_I8_D16_128_FLAT = [z_buffered, triangle, index8, constant_intensity, texture128x128, perspective]
+#softi:TriangleRender_PT_I8_128 = [z_buffered, triangle, index8, texture128x128, perspective,no_depth_write]
+softiz:TriangleRender_ZPT_I8_D16_128 = [z_buffered, triangle, index8, texture128x128, perspective]
+
+softiz:TriangleRender_ZPTI_I8_D16_64 = [z_buffered, triangle, index8, interpolated_intensity, texture64x64, perspective]
+softiz:TriangleRender_ZPTI_I8_D16_64_FLAT = [z_buffered, triangle, index8, constant_intensity, texture64x64, perspective]
+#softi:TriangleRender_PT_I8_64 = [z_buffered, triangle, index8, texture64x64, perspective,no_depth_write]
+softiz:TriangleRender_ZPT_I8_D16_64 = [z_buffered, triangle, index8, texture64x64, perspective]
+
+softiz:TriangleRender_ZPTI_I8_D16_32 = [z_buffered, triangle, index8, interpolated_intensity, texture32x32, perspective]
+softiz:TriangleRender_ZPTI_I8_D16_32_FLAT = [z_buffered, triangle, index8, constant_intensity, texture32x32, perspective]
+#softi:TriangleRender_PT_I8_32 = [z_buffered, triangle, index8, texture32x32, perspective,no_depth_write]
+softiz:TriangleRender_ZPT_I8_D16_32 = [z_buffered, triangle, index8, texture32x32, perspective]
+
+#########################################
+#Perspective Subdivide (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softiz:TriangleRender_ZTI_I8_D16_FLAT = [z_buffered, triangle, index8, texture, perspective_subdivide, constant_intensity, unscaled_texture_coords]
+softiz:TriangleRender_ZTI_I8_D16 = [z_buffered, triangle, index8, texture, perspective_subdivide, interpolated_intensity, unscaled_texture_coords]
+softiz:TriangleRender_ZT_I8_D16 = [z_buffered, triangle, index8, texture, perspective_subdivide, unscaled_texture_coords]
+
+
+#########################################
+#(Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softiz:TriangleRender_ZT_I8_D16_1024_FLAT = [z_buffered, triangle, index8, texture1024x1024, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024,interpolated_intensity]
+#softi:TriangleRender_T_I8_1024 = [z_buffered, triangle, index8, texture1024x1024,no_depth_write]
+softiz:TriangleRender_ZT_I8_D16_1024 = [z_buffered, triangle, index8, texture1024x1024]
+
+softiz:TriangleRender_ZT_I8_D16_256_FLAT = [z_buffered, triangle, index8, texture256x256, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_256 = [z_buffered, triangle, index8, texture256x256,interpolated_intensity]
+#softi:TriangleRender_T_I8_256 = [z_buffered, triangle, index8, texture256x256,no_depth_write]
+softiz:TriangleRender_ZT_I8_D16_256 = [z_buffered, triangle, index8, texture256x256]
+
+softiz:TriangleRender_ZT_I8_D16_128_FLAT = [z_buffered, triangle, index8, texture128x128, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_128 = [z_buffered, triangle, index8, texture128x128,interpolated_intensity]
+#softi:TriangleRender_T_I8_128 = [z_buffered, triangle, index8, texture128x128,no_depth_write]
+softiz:TriangleRender_ZT_I8_D16_128 = [z_buffered, triangle, index8, texture128x128]
+
+softiz:TriangleRender_ZT_I8_D16_64_FLAT = [z_buffered, triangle, index8, texture64x64, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_64 = [z_buffered, triangle, index8, texture64x64,interpolated_intensity]
+#softi:TriangleRender_T_I8_64 = [z_buffered, triangle, index8, texture64x64,no_depth_write]
+softiz:TriangleRender_ZT_I8_D16_64 = [z_buffered, triangle, index8, texture64x64]
+
+softiz:TriangleRender_ZT_I8_D16_32_FLAT = [z_buffered, triangle, index8, texture32x32, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_32 = [z_buffered, triangle, index8, texture32x32,interpolated_intensity]
+#softi:TriangleRender_T_I8_32 = [z_buffered, triangle, index8, texture32x32,no_depth_write]
+softiz:TriangleRender_ZT_I8_D16_32 = [z_buffered, triangle, index8, texture32x32]
+
+softiz:TriangleRender_ZT_I8_D16_16_FLAT = [z_buffered, triangle, index8, texture16x16, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_16 = [z_buffered, triangle, index8, texture16x16,interpolated_intensity]
+softiz:TriangleRender_ZT_I8_D16_16 = [z_buffered, triangle, index8, texture16x16]
+
+softiz:TriangleRender_ZT_I8_D16_8_FLAT = [z_buffered, triangle, index8, texture8x8, constant_intensity]
+softiz:TriangleRender_ZTI_I8_D16_8 = [z_buffered, triangle, index8, texture8x8,interpolated_intensity]
+softiz:TriangleRender_ZT_I8_D16_8 = [z_buffered, triangle, index8, texture8x8]
+
+#########################################
+#(Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softiz:TriangleRender_ZTI_I8_D16 = [z_buffered,triangle, index8, interpolated_intensity, texture,unscaled_texture_coords]
+softiz:TriangleRender_ZTI_I8_D16_FLAT = [z_buffered,triangle, index8, constant_intensity,texture,unscaled_texture_coords]
+softiz:TriangleRender_ZT_I8_D16 = [z_buffered,triangle, index8, texture,unscaled_texture_coords]
+
+
+#########################################
+#Untextured
+#########################################
+[]
+
+softiz:TriangleRender_ZI_I8_D16_ShadeTable = [z_buffered, triangle, index8, interpolated_intensity,shade_table,range_zero]
+softiz:TriangleRender_ZI_I8_D16 = [z_buffered, triangle, index8, interpolated_intensity]
+softiz:TriangleRender_Z_I8_D16_ShadeTable = [z_buffered, triangle, index8, constant_intensity, shade_table,range_zero]
+softiz:TriangleRender_Z_I8_D16 = [z_buffered, triangle, index8, constant_intensity]
+
+#Fall Through Position
+softiz:TriangleRender_Z_I8_D16 = [z_buffered, triangle, index8]
+
+#########################################
+#########################################
+# Not Z buffered
+#########################################
+#########################################
+
+#########################################
+#Decal (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softi:TriangleRender_TID_I8_256 = [triangle, index8, interpolated_intensity, decal,texture256x256]
+softi:TriangleRender_TID_I8_256_FLAT = [triangle, index8, constant_intensity, decal,texture256x256]
+
+
+#########################################
+#Decal (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softi:TriangleRender_TID_I8 = [triangle, index8, interpolated_intensity, decal,texture,unscaled_texture_coords]
+softi:TriangleRender_TID_I8_FLAT = [triangle, index8, constant_intensity, decal,texture,unscaled_texture_coords]
+
+
+#########################################
+#Dithered Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip,image_suffix=]
+
+softd:TriangleRenderPIZ2TPD1024 = [triangle, index8, texture1024x1024, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD256 = [triangle, index8, texture256x256, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD128 = [triangle, index8, texture128x128, perspective, dithered_map, fixed_components]
+softd:TriangleRenderPIZ2TPD64 = [triangle, index8, texture64x64, perspective, dithered_map, fixed_components]
+
+#########################################
+#Perspective (Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softi:TriangleRender_PTI_I8_1024 = [triangle, index8, interpolated_intensity, texture1024x1024, perspective]
+softi:TriangleRender_PTI_I8_1024_FLAT = [triangle, index8, constant_intensity, texture1024x1024, perspective]
+softi:TriangleRender_PT_I8_1024 = [triangle, index8, texture1024x1024, perspective]
+
+softi:TriangleRender_PTI_I8_256 = [triangle, index8, interpolated_intensity, texture256x256, perspective]
+softi:TriangleRender_PTI_I8_256_FLAT = [triangle, index8, constant_intensity, texture256x256, perspective]
+softi:TriangleRender_PT_I8_256 = [triangle, index8, texture256x256, perspective]
+
+softi:TriangleRender_PTI_I8_128 = [triangle, index8, interpolated_intensity, texture128x128, perspective]
+softi:TriangleRender_PTI_I8_128_FLAT = [triangle, index8, constant_intensity, texture128x128, perspective]
+softi:TriangleRender_PT_I8_128 = [triangle, index8, texture128x128, perspective]
+
+softi:TriangleRender_PTI_I8_64 = [triangle, index8, interpolated_intensity, texture64x64, perspective]
+softi:TriangleRender_PTI_I8_64_FLAT = [triangle, index8, constant_intensity, texture64x64, perspective]
+softi:TriangleRender_PT_I8_64 = [triangle, index8, texture64x64, perspective]
+
+softi:TriangleRender_PT_I8_32 = [triangle, index8, texture32x32, perspective]
+
+#########################################
+#Perspective Subdivision (Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softi:TriangleRender_TI_I8_FLAT = [triangle, index8, texture, perspective_subdivide, constant_intensity, unscaled_texture_coords]
+softi:TriangleRender_TI_I8 = [triangle, index8, texture, perspective_subdivide, interpolated_intensity, unscaled_texture_coords]
+softi:TriangleRender_T_I8 = [triangle, index8, texture, perspective_subdivide, unscaled_texture_coords]
+
+
+#########################################
+#(Powers of 2)
+#########################################
+[texture_stride_positive,texture_no_skip]
+
+softi:TriangleRender_T_I8_1024 = [triangle, index8, texture1024x1024]
+
+softi:TriangleRender_TI_I8_256 = [triangle, index8, texture256x256, interpolated_intensity]
+softi:TriangleRender_TI_I8_256_FLAT = [triangle, index8, texture256x256, constant_intensity]
+softi:TriangleRender_T_I8_256 = [triangle, index8, texture256x256]
+
+softi:TriangleRender_T_I8_128 = [triangle, index8, texture128x128]
+
+softi:TriangleRender_T_I8_64 = [triangle, index8, texture64x64]
+
+softi:TriangleRender_T_I8_32 = [triangle, index8, texture32x32]
+
+#########################################
+#(Arbitrary Width)
+#########################################
+[texture_stride_positive]
+
+softi:TriangleRender_TI_I8 = [triangle, index8, texture, interpolated_intensity,unscaled_texture_coords]
+softi:TriangleRender_TI_I8_FLAT = [triangle, index8, texture,unscaled_texture_coords,constant_intensity]
+softi:TriangleRender_T_I8 = [triangle, index8, texture,unscaled_texture_coords]
+
+
+#########################################
+#Untextured
+#########################################
+[]
+
+softi:TriangleRender_I_I8 = [triangle, index8, interpolated_intensity]
+softi:TriangleRender_I8 = [triangle, index8, constant_intensity]
+
+#Fall Through Position
+softi:TriangleRender_I8 = [triangle, index8]

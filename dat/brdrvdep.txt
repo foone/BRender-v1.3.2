@@ -1,0 +1,34 @@
+# BRender device driver dependancy list
+# =====================================
+
+
+# The 3Dfx Voodoo needs glide DLLs present
+
+3DFX_WIN:glide.dll,sst1init.dll
+
+# Direct Draw driver needs DDRAW.DLL present
+
+DDRAW:ddraw.dll
+
+# The Direct3D needs a whole load of DLLs present. 
+# For the time being, just check for two key DLLs
+
+DIRECT3D:ddraw.dll,d3dim.dll
+
+# Matrox Mystique dependencies
+
+MYST_WIN:
+
+# ATI Rage / Rage II dependencies
+
+RAGE_WIN:ati3dcif.dll,ati3dcor.dll
+
+# S3 Virge dependancies
+
+S3_WIN:s3dtkw.dll,ddraw.dll
+
+# SMOS dependencies
+
+SMOS:pix.dll,ddraw.dll
+
+TREX:

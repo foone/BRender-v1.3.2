@@ -1,0 +1,69 @@
+{{}} Copyright (c) 1996 Argonaut Software Ltd. All rights reserved.
+{{}}
+{{}} A template for demo makefiles
+{{}}
+{{}} $Id: makefile.msc 1.1 1997/12/10 16:43:26 jon Exp $
+{{}} $Locker: $
+{{}}
+# NMAKE makefile with Microsoft Visual C++ 2.0 + Pharlap TNT
+#
+OBJ_EXT=.obj
+LIB_EXT=.lib
+EXE_EXT=.exe
+
+TARGET={{target}}
+
+BASE_DIR=..\..\..
+
+# Microsoft, Float, Release
+#
+LIB_TYPE=mfr
+LIB_TYPE_NB=mr
+LIB_TYPE_EX=plmr
+BASED=FLOAT
+
+# Microsoft, Fixed, Release
+#
+#LIB_TYPE=mxr
+#LIB_TYPE_NB=mr
+#LIB_TYPE_EX=plmr
+#BASED=FIXED
+
+OBJS=\
+	{{object_c}}\
+	{{object_cpp}}\
+	{{object_asm}}\
+
+LIBS=\
+	{{library}}\
+
+# Default rules
+#
+{?object_c?}CC=cl
+{?object_c?}CFLAGS=-c -Zp4 -Gz -DBASED_$(BASED)=1 -I$(BASE_DIR)\inc
+{?object_c?}
+{?object_c?}.c.obj:
+{?object_c?}	$(CC) $(CFLAGS) $<
+{?object_c?}
+{?object_cpp?}CPPC=cl
+{?object_cpp?}CPPFLAGS=-c -Zp4 -Gz -DBASED_$(BASED)=1 -I$(BASE_DIR)\inc
+{?object_cpp?}
+{?object_cpp?}.cpp.obj:
+{?object_cpp?}	$(CPPC) $(CPPFLAGS) $<
+{?object_cpp?}
+{?object_asm?}AS=ml
+{?object_asm?}ASFLAGS=-c -DBASED_$(BASED)=1 -I$(BASE_DIR)\inc
+{?object_asm?}
+{?object_asm?}.asm.obj:
+{?object_asm?}	$(AS) $(ASFLAGS) $<
+{?object_asm?}
+LD=386link
+LDFLAGS=@msvc32.dos -stack 65536
+
+
+$(TARGET): $(OBJS)
+	$(LD) $(LDFLAGS) -exe $(TARGET) @<<link.rsp
+$(OBJS)
+-lib $(LIBS)
+<<
+

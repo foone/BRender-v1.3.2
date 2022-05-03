@@ -1,0 +1,14 @@
+# List of exported symbols for SOFTTZ.BDD
+# $Id: softtz.exf 1.1 1997/12/10 16:48:54 jon Exp $
+# $Locker: $
+#
+=softtz
+PrimLibWork
+TriangleRenderPIZ2TA24
+TriangleRenderPIZ2TIA_RGB_888
+TriangleRenderPIZ2I_RGB_888
+TriangleRenderPIZ2_RGB_888
+LineRenderPIZ2T_RGB_888
+LineRenderPIZ2I_RGB_888
+PointRenderPIZ2T_RGB_888
+PointRenderPIZ2_RGB_888

@@ -1,0 +1,24 @@
+# List of primitives, processed by infogen.pl 
+#
+[texture_stride_positive]
+softtz:TriangleRenderPIZ2TA24 = [z_buffered, triangle, rgb888, texture, perspective_subdivide]
+softtz:TriangleRenderPIZ2TIA_RGB_888 = [z_buffered, triangle, rgb888, texture, texture_index8, perspective_subdivide, constant_intensity, duplicate]
+softtz:TriangleRenderPIZ2TIA_RGB_888 = [z_buffered, triangle, rgb888, texture, texture_index8, perspective_subdivide, interpolated_intensity]
+softtz:TriangleRenderPIZ2TA24 = [triangle, z_buffered, rgb888, texture]
+softtz:TriangleRenderPIZ2TIA_RGB_888 = [triangle, z_buffered, rgb888, interpolated_intensity, texture, texture_index8]
+softtz:TriangleRenderPIZ2TIA_RGB_888 = [triangle, z_buffered, rgb888, constant_intensity, duplicate, texture, texture_index8]
+[]
+softtz:TriangleRenderPIZ2I_RGB_888 = [triangle, z_buffered, rgb888, interpolated_colour]
+softtz:TriangleRenderPIZ2_RGB_888 = [triangle, z_buffered, rgb888, constant_colour]
+
+[texture_stride_positive]
+softt:TriangleRenderPITA24 = [triangle, rgb888, texture, perspective_subdivide]
+softt:TriangleRenderPITIA_RGB_888 = [triangle, rgb888, texture, texture_index8, perspective_subdivide, constant_intensity, duplicate]
+softt:TriangleRenderPITIA_RGB_888 = [triangle, rgb888, texture, texture_index8, perspective_subdivide, interpolated_intensity]
+softt:TriangleRenderPITA24 = [triangle, rgb888, texture]
+softt:TriangleRenderPITIA_RGB_888 = [triangle, rgb888, interpolated_intensity, texture, texture_index8]
+softt:TriangleRenderPITIA_RGB_888 = [triangle, rgb888, constant_intensity, duplicate, texture, texture_index8]
+[]
+softt:TriangleRenderPII_RGB_888 = [triangle, rgb888, interpolated_colour]
+softt:TriangleRenderPI_RGB_888 = [triangle, rgb888, constant_colour]
+

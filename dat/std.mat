@@ -1,0 +1,204 @@
+## Materials script file 
+##
+
+# Smooth and flat versions of all the ramps in the test palette
+#
+material = [
+	identifier = "grey";
+	flags = [light, smooth, two_sided];
+	colour = [255,255,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.0;
+	power = 30;
+	index_base = 0; index_range = 63;
+];
+
+material = [
+	identifier = "grey_flat";
+	flags = [light, two_sided];
+	colour = [255,255,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.0;
+	power = 20;
+	index_base = 0; index_range = 63;
+];
+
+material = [
+	identifier = "red";
+	flags = [light,smooth];
+	colour = [255,0,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 160; index_range = 31;
+];
+
+material = [
+	identifier = "red_flat";
+	flags = [light];
+	colour = [255,0,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 160; index_range = 31;
+];
+
+material = [
+	identifier = "green";
+	flags = [light,smooth];
+	colour = [0,255,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 96; index_range = 31;
+];
+
+material = [
+	identifier = "green_flat";
+	flags = [light];
+	colour = [0,255,0];
+	ambient = 0.1; diffuse = 0.8; specular = 0.0;
+	power = 20;
+	index_base = 96; index_range = 31;
+];
+
+material = [
+	identifier = "blue";
+	flags = [light,smooth];
+	colour = [0,0,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 64; index_range = 31;
+];
+
+material = [
+	identifier = "blue_flat";
+	flags = [light];
+	colour = [0,0,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 64; index_range = 31;
+];
+
+material = [
+	identifier = "cyan";
+	flags = [light,smooth];
+	colour = [0,255,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 128; index_range = 31;
+];
+
+material = [
+	identifier = "cyan_flat";
+	flags = [light];
+	colour = [0,255,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 128; index_range = 31;
+];
+
+material = [
+	identifier = "magenta";
+	flags = [light,smooth];
+	colour = [255,0,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 192; index_range = 31;
+];
+
+material = [
+	identifier = "magenta_flat";
+	flags = [light];
+	colour = [255,0,255];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 192; index_range = 31;
+];
+
+material = [
+	identifier = "yellow";
+	flags = [light,smooth];
+	colour = [255,255,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 224; index_range = 31;
+];
+
+material = [
+	identifier = "yellow_flat";
+	flags = [light];
+	colour = [255,255,0];
+	ambient = 0.1; diffuse = 0.6; specular = 0.4;
+	power = 20;
+	index_base = 224; index_range = 31;
+];
+
+# Some test textures
+#
+material = [
+	identifier = "jupiter";
+	flags = [light, smooth ];
+	ambient = 0.05; diffuse = 0.75; specular = 0.0;
+#	colour_map = "jupiter.pix";
+#	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "rosewood";
+	flags = [light, smooth ];
+	ambient = 0.05; diffuse = 0.50; specular = 0.35;
+	map_transform = [[1,0],[0,1],[0,0]];
+	power = 20;
+	colour_map = "rosewood.pix";
+	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "earth";
+	flags = [light, smooth ];
+	ambient = 0.05; diffuse = 0.30; specular = 0.90;
+	power=20;
+	colour_map = "earth.pix";
+	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "test_texture";
+	flags = [ perspective ];
+	ambient = 0.10; diffuse = 0.70; specular = 0.20;
+	power=20;
+	colour_map = "testtex.pix";
+	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "terrain";
+	flags = [ ];
+	colour_map = "terrain.pix";
+];
+
+material = [
+	identifier = "mandrill";
+	flags = [light, smooth, decal];
+	ambient = 0.05; diffuse = 0.75; specular = 0.0;
+	colour_map = "x29decal.pix";
+	index_shade = "shade.tab";
+];
+
+# Test environment maps
+#
+material = [
+	identifier = "test_environment";
+	flags = [light, smooth, environment];
+	ambient = 0.20; diffuse = 0.50; specular = 0.60;
+	power=20;
+	colour_map = "testenv.pix";
+	index_shade = "shade.tab";
+];
+
+material = [
+	identifier = "test_environment_1";
+	flags = [light, smooth, environment_local];
+	ambient = 0.20; diffuse = 0.50; specular = 0.60;
+	power=20;
+	colour_map = "testenv1.pix";
+	index_shade = "shade.tab";
+];
+
+

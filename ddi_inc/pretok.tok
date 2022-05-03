@@ -1,0 +1,955 @@
+# Starting set of tokens - duplication is OK
+#
+
+## Token types 
+##
+# Name							Extention
+$none
+$boolean						_B
+$pointer						_P
+$token							_T
+$int_8							_I8
+$uint_8							_U8
+$int_16							_I16
+$uint_16						_U16
+$int_32							_I32
+$uint_32						_U32
+$fixed							_X
+$float							_F
+$angle							_A
+$colour_rgb						_RGB
+$object							_O
+$handle							_H
+$vector2_integer				_V2_I
+$vector3_integer				_V3_I
+$vector4_integer				_V4_I
+$vector2_fixed					_V2_X
+$vector3_fixed					_V3_X
+$vector4_fixed					_V4_X
+$vector2_float					_V2_F
+$vector3_float					_V3_F
+$vector4_float					_V4_F
+$matrix23_fixed					_M23_X
+$matrix34_fixed					_M34_X
+$matrix4_fixed					_M4_X
+$matrix23_float					_M23_F
+$matrix34_float					_M34_F
+$matrix4_float					_M4_F
+$string							_STR
+$constant_string				_CSTR
+$object_list					_OL
+$token_list						_TL
+$pointer_list					_PL
+$token_value_list               _TVL
+
+## General tokens
+##
+#	Name						Type
+
+# Tokens to represent object types
+#
+#
+OBJECT							none
+OBJECT_CONTAINER				none
+DEVICE							none
+FACILITY						none
+OUTPUT_FACILITY					none
+DEVICE_PIXELMAP	 				none
+DEVICE_CLUT		 				none
+RENDERER_FACILITY				none
+RENDERER						none
+RENDERER_STATE_STORED			none
+BUFFER_STORED					none
+GEOMETRY						none
+GEOMETRY_STORED					none
+GEOMETRY_PRIMITIVES				none
+GEOMETRY_V1_MODEL				none
+GEOMETRY_V1_BUCKETS				none
+GEOMETRY_LIGHTING				none
+PRIMITIVE_LIBRARY				none
+PRIMITIVE_STATE					none
+
+# Tokens used for DEVICE object information
+#
+IDENTIFIER						constant_string
+VERSION							uint_32			# Version number - vvvv.rrrmm (eg: 0x00010102 = 1.1.2)
+
+BRENDER_VERSION					uint_32         # Version of framework that driver was built against
+DDI_VERSION						uint_32         # Version of DDI that driver was built against
+
+CREATOR							constant_string # Organisation or person who built driver
+TITLE							constant_string # Human readable string identifying driver and version
+
+PRODUCT							constant_string # Product, if any that this driver is associated with
+PRODUCT_VERSION					constant_string # Version of product that driver is associated with
+
+STEREO							boolean
+STEREO							token
+STEREO							token_list
+	NONE						none
+	ODD_EVEN					none
+	EVEN_ODD					none
+	LEFT_RIGHT					none
+	RIGHT_LEFT					none
+	TOP_BOTTOM					none
+	BOTTOM_TOP					none
+CLUT							object
+
+# Tokens used for OUTPUT_FACILITY object information
+#
+IDENTIFIER						constant_string
+WIDTH							int_32
+WIDTH_MIN						int_32
+WIDTH_MAX						int_32
+HEIGHT							int_32
+HEIGHT_MIN						int_32
+HEIGHT_MAX						int_32
+
+PIXEL_TYPE						uint_8
+PIXEL_BITS						int_32
+WORD_BYTES						int_32
+PIXEL_CHANNELS					int_32
+PIXEL_CHANNELS					token_list
+	INDEX						none
+	RED							none
+	GREEN						none
+	BLUE						none
+	DEPTH						none
+	ALPHA						none
+INDEXED							boolean
+MEMORY_MAPPED					boolean
+PRIMITIVE_LIBRARY				object
+PRIMITIVE_LIBRARY				object_list		# List of primitive libraries suitable for this type of pixelmap
+RENDERER_FACILITY				object
+RENDERER_FACILITY				object_list		# List of renderer facilities suitable for this type of pixelmap
+
+PIXELMAP_MAX					int_32
+CLUT_MAX						int_32
+VIDEO_MEMORY					uint_32
+TEXTURE_MEMORY					uint_32
+HOST_MEMORY						uint_32
+MODE							uint_32
+
+# Tokens for 2d pixelmap querying
+#
+MATCH                           token_value_list
+COPY_SOURCE                     token_value_list
+COPY_DESTINATION                token_value_list
+COPY                            fixed
+COPY                            float
+STRETCH_COPY_SOURCE             token_value_list
+STRETCH_COPY_DESTINATION        token_value_list
+STRETCH_COPY                    token
+STRETCH_COPY                    token_list
+STRETCH_COPY                    fixed
+STRETCH_COPY                    float
+COPY_BITS                       fixed
+COPY_BITS                       float
+SYCHRONISE                      int_32
+PIXEL_GET                       fixed
+PIXEL_GET                       float
+PIXEL_SET                       fixed
+PIXEL_SET                       float
+DIRECT                          fixed
+DIRECT                          float
+
+# Tokens used for DEVICE_PIXELMAP object information
+#
+IDENTIFIER						constant_string
+WIDTH							int_32
+HEIGHT							int_32
+
+PIXEL_TYPE						uint_8
+PIXEL_BITS						int_32
+WORD_BYTES						int_32
+PIXEL_CHANNELS					int_32
+PIXEL_CHANNELS					token_list
+	INDEX						none
+	RED							none
+	GREEN						none
+	BLUE						none
+	DEPTH						none
+	ALPHA						none
+INDEXED							boolean
+
+OUTPUT_FACILITY					object
+FACILITY						object
+ORIGIN							vector2_integer
+FONT_NORMAL						pointer
+FONT_NORMAL						object
+CLUT							object
+PRIMITIVE_LIBRARY				object
+PRIMITIVE_LIBRARY				object_list		# List of primitive libraries suitable for this pixelmap
+RENDERER_FACILITY				object
+RENDERER_FACILITY				object_list		# List of renderer facilities suitable for this pixelmap
+
+# Tokens used for DEVICE_CLUT object information
+#
+IDENTIFIER						constant_string
+DEFAULT_BASE					int_32
+DEFAULT_RANGE					int_32
+WRITABLE_BASE					int_32
+WRITABLE_RANGE					int_32
+
+# br_device_pixelmap_match
+#
+USE								token
+	CLONE							none
+	DEPTH							none
+	OFFSCREEN						none	# candiate for doubleBuffer
+	HIDDEN							none	# Can render but will never double buffer
+	HIDDEN_BUFFER					none	# Can render to and will use as texture
+	NO_RENDER						none	# Cannot display, render to or use as texture
+	BUFFER							none	# Will use as a texture, but cannot display or render to
+
+PIXEL_TYPE						uint_8
+PIXEL_BITS						int_32
+RENDERER						object
+WIDTH							int_32
+HEIGHT							int_32
+
+# Used for all pixelmap creation routines -
+# Makes garuantees about how pixelmap will be used
+#
+
+# If true app will never try to invoke 3d rendering
+USE_NO_3D						boolean
+
+# If true app will never try create a depth buffer for this pixelmap
+USE_NO_DEPTH					boolean
+
+# Tokens used for RENDERER_FACILITY object information
+#
+IDENTIFIER						constant_string
+LIGHT_MAX						int_32
+CLIP_MAX						int_32
+RENDERER_MAX					int_32
+PARTS							token_list
+ALTERNATIVE_TO_DEFAULT			boolean		# Can be used instead of default
+USES_PRIMITIVE_LIBRARY			boolean		# Uses a primitive library for rasterisation
+
+# Tokens used for RENDERER object information
+#
+IDENTIFIER						constant_string
+LIGHT_MAX						int_32
+CLIP_MAX						int_32
+RENDERER_FACILITY					object
+FACILITY						object
+PARTS							token_list
+
+# Tokens used for BUFFER_STORED object information
+#
+SHARED							boolean
+CACHED							boolean
+CACHED_SIZE						uint_32
+CACHED_TOTAL                                            uint_32
+UPDATE_DATA                                             boolean
+# tokens for bufferAdd/Update
+#
+CAN_SHARE						boolean
+PREFER_SHARE					boolean
+
+# Tokens used for GEOMETRY_STORED object information
+#
+CACHED							boolean
+CACHED_SIZE						uint_32
+CACHED_TOTAL					uint_32
+
+# Tokens used for RENDERER_STATE_STORED object information
+#
+PARTS							uint_32
+PARTS							token_list
+CACHED							boolean
+CACHED_SIZE						uint_32
+CACHED_TOTAL					uint_32
+
+# Tokens used for GEOMETRY_FORMAT object information
+#
+FORMAT							token
+RENDERER_FACILITY				object
+FACILITY						object
+
+# Tokens used for PRIMITIVE_LIBRARY object information
+#
+PARTS							token_list
+ALTERNATIVE_TO_DEFAULT			boolean		# Can be used instead of default
+
+# Tokens used for PRIMITIVE_STATE object information
+#
+PARTS							token_list
+CACHED							boolean
+CACHED_SIZE						uint_32
+CACHED_TOTAL					uint_32
+
+# Tokens used for br_renderer_type::newRenderer
+#
+DESTINATION						object
+OUTPUT_FACILITY					object
+PRIMITIVE_LIBRARY				pointer
+
+# Tokens used for different parts of renderer state
+#
+CULL							none
+SURFACE							none
+MATRIX							none
+ENABLE							none
+LIGHT							none
+CLIP							none
+BOUNDS							none
+HIDDEN_SURFACE					none
+PRIMITIVE						none
+OUTPUT							none
+
+# Tokens used for primitive state (handled by primitive layer)
+#
+SMOOTH							boolean
+SMOOTH_OPACITY					boolean
+DECAL							boolean
+DEPTH_WRITE						boolean
+COLOUR_WRITE					boolean
+BLEND							boolean
+MODULATE						boolean
+MODULATE_ALPHA                   boolean
+COLOUR_KEY                      boolean
+
+PERSPECTIVE						boolean
+PERSPECTIVE						token
+PERSPECTIVE						token_list
+	NONE							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+	SUBDIVIDE						none
+
+# Amount of error allowed for subdivision.
+# 0 is default
+# -ve is more tolerant
+# +ve is less tolerant
+#
+# Useful range should be -100 -> +100
+#
+SUBDIVIDE_TOLERANCE				int_32
+
+DITHER_COLOUR					boolean
+DITHER_COLOUR					token
+DITHER_COLOUR					token_list
+	NONE							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+# This should be nuked - superceded by MAP_INTERPOLATION
+#
+DITHER_MAP						boolean
+DITHER_MAP						token
+DITHER_MAP						token_list
+	NONE							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+COLOUR							boolean
+COLOUR							token
+COLOUR							token_list
+	NONE							none
+	RGB								none
+	INDEX							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+INDEX_BASE						int_32
+INDEX_RANGE						int_32
+
+ANTIALIASING					token
+ANTIALIASING					token_list
+	NONE							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+MAP_ANTIALIASING				token
+MAP_ANTIALIASING				token_list
+	NONE							none
+	MIP								none
+	MIP_PER_PIXEL					none
+	MIP_PER_PRIMITIVE				none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+MAP_INTERPOLATION				token
+MAP_INTERPOLATION				token_list
+	NONE							none
+	NEAREST							none
+	DITHER							none
+	LINEAR							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+MAP_INTERPOLATION_MAG				token
+MAP_INTERPOLATION_MAG				token_list
+	NONE							none
+	NEAREST							none
+	DITHER							none
+	LINEAR							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+MAP_INTERPOLATION_MIN				token
+MAP_INTERPOLATION_MIN				token_list
+	NONE							none
+	NEAREST							none
+	DITHER							none
+	LINEAR							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+MIP_INTERPOLATION				token
+MIP_INTERPOLATION				token_list
+	NONE							none
+	NEAREST							none
+	LINEAR							none
+	DITHER							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+FOG								token
+FOG								token_list
+	NONE							none
+	LINEAR							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+FOG								colour_rgb
+FOG_MIN							float
+FOG_MIN							fixed
+FOG_MAX							float
+FOG_MAX							fixed
+
+DEPTH_TEST						token
+DEPTH_TEST						token_list
+	GREATER							none
+	GREATER_OR_EQUAL				none
+	EQUAL							none
+	NOT_EQUAL						none
+	LESS_OR_EQUAL					none
+	LESS							none
+	NEVER							none
+	ALWAYS							none
+	NONE							none
+
+MAP_WIDTH_LIMIT					token
+MAP_WIDTH_LIMIT					token_list
+	WRAP							none
+	CLAMP							none
+	MIRROR							none
+	DEFAULT							none
+
+MAP_HEIGHT_LIMIT				token
+MAP_HEIGHT_LIMIT				token_list
+	WRAP							none
+	CLAMP							none
+	MIRROR							none
+	DEFAULT							none
+
+
+WIDTH                           token
+WIDTH                           token_list
+
+HEIGHT                          token
+HEIGHT                          token_list
+
+WIDTH_OPTIMUM                   int_32
+HEIGHT_OPTIMUM                  int_32
+
+PRIMITIVE_BLOCK					pointer			# Private - allows a primitive block to be passed in for debugging/testing
+
+# Some common buffers
+#
+TEXTURE							object
+COLOUR_MAP						object
+INDEX_SHADE						object
+INDEX_BLEND						object
+SCREEN_DOOR						object
+INDEX_LIGHT						object
+BUMP							object
+INDEX_FOG                       object
+
+TEXTURE                         token_value_list
+COLOUR_MAP                      token_value_list
+INDEX_SHADE                     token_value_list
+INDEX_BLEND                     token_value_list
+SCREEN_DOOR                     token_value_list
+INDEX_LIGHT                     token_value_list
+BUMP                            token_value_list
+INDEX_FOG                       token_value_list
+
+# Unknown buffer use
+#
+UNKNOWN							none
+
+# Tokens used for culling state (handled by renderer)
+#
+TYPE							token
+	NONE							none
+	ONE_SIDED						none
+	TWO_SIDED						none
+
+SPACE							token
+	VIEW							none
+	MODEL							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+# Tokens used for surface state (handled by renderer)
+#
+LIGHTING						boolean
+PRELIGHTING						boolean
+
+SEPARATE_SPECULAR               boolean
+
+FORCE_FRONT						boolean
+FORCE_BACK						boolean
+
+DEPTH_BIAS						float
+DEPTH_BIAS						fixed
+
+COLOUR_SOURCE					token
+	NONE							none
+	SURFACE							none
+	GEOMETRY						none
+	PRIMITIVE						none
+	VERTEX							none
+OPACITY_SOURCE					token
+	NONE							none
+	SURFACE							none
+	GEOMETRY						none
+	PRIMITIVE						none
+	VERTEX							none
+MAPPING_SOURCE					token
+	NONE							none
+	ENVIRONMENT_LOCAL 				none
+	ENVIRONMENT_INFINITE			none
+	GEOMETRY_MAP					none
+	GEOMETRY_X						none
+	GEOMETRY_Y						none
+	GEOMETRY_Z						none
+	QUAD							none
+
+COLOUR							int_32
+COLOUR							colour_rgb
+OPACITY							fixed
+OPACITY							float
+
+AMBIENT							fixed
+AMBIENT							float
+DIFFUSE							fixed
+DIFFUSE							float
+SPECULAR						fixed
+SPECULAR						float
+
+SPECULAR_POWER					fixed
+SPECULAR_POWER					float
+
+MAP_MATRIX						matrix23_float
+MAP_MATRIX						matrix23_fixed
+
+SURFACE_C_CUSTOM				pointer
+SURFACE_C_FILTER				pointer
+
+SURFACE_V_CUSTOM				pointer
+SURFACE_V_FILTER				pointer
+
+PRIMITIVE_CUSTOM				pointer
+PRIMITIVE_FILTER				pointer
+
+
+# Tokens used for light state
+#
+TYPE							token
+	NONE							none
+	DIRECT							none
+	POINT							none
+	SPOT							none
+	AMBIENT							none
+
+SPACE							token
+	VIEW							none
+	MODEL							none
+	DEFAULT							none
+	BEST_SPEED						none
+	BEST_QUALITY					none
+
+POSITION						vector3_float
+POSITION						vector3_fixed
+DIRECTION						vector3_float
+DIRECTION						vector3_fixed
+
+COLOUR							colour_rgb
+
+SPOT_OUTER						fixed
+SPOT_OUTER						float
+SPOT_INNER						fixed
+SPOT_INNER						float
+
+RADIUS_OUTER					fixed	# Cutoff radius and outer radius for linear falloff
+RADIUS_OUTER					float
+RADIUS_INNER					fixed
+RADIUS_INNER					float
+
+ANGLE_OUTER						angle	# Cutoff angle
+ANGLE_INNER						angle
+
+ATTENUATION_L					fixed
+ATTENUATION_L					float
+
+ATTENUATION_C					fixed
+ATTENUATION_C					float
+
+ATTENUATION_Q					fixed
+ATTENUATION_Q					float
+
+# Flag indicating that radius/angle cutoff is to be used on point and spot lights
+
+RADIUS_CULL						boolean
+ANGLE_CULL						boolean
+
+# Type of attenuation - quadratic or using inner and outer radii
+
+ATTENUATION_TYPE				token
+	QUADRATIC						none
+	RADII							none
+
+ATTENUATION_HINT				token
+	CONSTANT						none
+	LINEAR							none
+	QUADRATIC						none
+
+LIGHTING_VOLUME					pointer
+
+# Boolean that can be set to cull a light from affecting a particular model
+
+CULLED							boolean
+
+
+# Tokens used for clip state
+#
+TYPE							token
+	NONE							none
+	PLANE							none
+PLANE							vector4_float
+PLANE							vector4_fixed
+
+# Tokens used for bounds state
+#
+MIN								vector2_integer
+MIN								vector2_fixed
+MIN								vector2_float
+MAX								vector2_integer
+MAX								vector2_fixed
+MAX								vector2_float
+
+# Tokens used for matrix state
+#
+MODEL_TO_VIEW					matrix34_float
+MODEL_TO_VIEW					matrix34_fixed
+MODEL_TO_VIEW_HINT				token
+	NONE							none
+	LENGTH_PRESERVING				none
+VIEW_TO_SCREEN					matrix4_float
+VIEW_TO_SCREEN					matrix4_fixed
+VIEW_TO_SCREEN_HINT				token
+	NONE							none
+	PERSPECTIVE						none
+	PARALLEL						none
+VIEW_TO_ENVIRONMENT				matrix34_float
+VIEW_TO_ENVIRONMENT				matrix34_fixed
+VIEW_TO_ENVIRONMENT_HINT		token
+	NONE							none
+	DONT_CARE						none
+
+MODEL_TO_SCREEN					matrix4_float
+MODEL_TO_SCREEN					matrix4_fixed
+
+HITHER_Z						float
+HITHER_Z						fixed
+
+YON_Z							float
+YON_Z							fixed
+
+# Tokens used for output state
+#
+COLOUR_BUFFER					object
+DEPTH_BUFFER					object
+
+# Tokens used for enable state
+#
+CULL							boolean
+TRANSFORM						boolean
+SURFACE							boolean
+CLIPPING						boolean
+BOUNDS							boolean
+RENDER							boolean
+
+# Tokens used for hidden surface state
+#
+TYPE							token
+	NONE							none
+	BUCKET_SORT						none
+
+DIVERT							token
+	NONE							none
+	ALL	   							none
+	BLENDED							none
+	
+
+V1ORDER_TABLE					pointer
+V1PRIMITIVE_HEAP				pointer
+V1INSERT_FUNCTION				pointer
+V1INSERT_ARG1					pointer
+V1INSERT_ARG2					pointer
+V1INSERT_ARG3					pointer
+STORED_STATE					object
+
+# Currently known primtive types
+#
+SPRITE							none
+POINT							none
+LINE							none
+TRIANGLE						none
+QUAD							none
+STATE_RESTORE					none
+
+# Geometry formats
+#
+PRIMITIVES						none
+V1MODEL							none
+V1BUCKETS						none
+LIGHT_VERTICES					none
+
+# Tokens decribing sync. types
+#
+VERTICAL_BLANK					none		# In vertical blank
+RENDERER						none		# Rendering finished
+
+# Tokens for on screen check results
+#
+PARTIAL							none
+ACCEPT							none
+REJECT							none
+
+# Tokens to represent scalar types
+#
+FLOAT							none
+FIXED							none
+
+# Tokens for image pixel formats - descriptions are big-endian
+#
+INDEX_1							none
+INDEX_2							none
+INDEX_4							none
+INDEX_8							none
+
+XRGB_1_5_5_5					none
+XBGR_1_5_5_5					none
+
+ARGB_1_5_5_5					none
+ABGR_1_5_5_5					none
+
+RGB_5_6_5						none
+BGR_5_6_5						none
+
+RGB_2_3_2						none
+BGR_2_3_2						none
+
+RGB_8_8_8						none
+BGR_8_8_8						none
+
+XRGB_8_8_8_8					none
+XBGR_8_8_8_8					none
+
+BGRX_8_8_8_8					none
+RGBX_8_8_8_8					none
+
+ARGB_8_8_8_8					none
+ABGR_8_8_8_8					none
+
+BGRA_8_8_8_8					none
+RGBA_8_8_8_8					none
+
+ARGB_4_4_4_4					none
+ABGR_4_4_4_4					none
+
+BGRA_4_4_4_4					none
+RGBA_4_4_4_4					none
+
+D_16							none
+D_24							none
+D_32							none
+A_8								none
+
+INDEXA_8_8						none
+INDEXA_4_4						none
+
+AINDEX_8_8						none
+AINDEX_4_4						none
+
+XYZ_8_8_8						none
+XYZ_16_16_16					none
+
+YUV_16							none
+
+PRIVATE							none # Some 'other' format
+
+# Tokens for texture requirements
+#
+SQUARE							none
+POWER_OF_2						none
+ZERO_IS_TRANSPARENT				none
+KEY_IS_TRANSPARENT				none
+
+
+# Tokens for generic Windows driver
+#
+WINDOW_NAME		    			constant_string
+WINDOW_PROCEDURE				pointer
+WINDOW_HANDLE					handle
+WINDOW_FULLSCREEN				boolean
+WINDOW_BUFFER_METHOD			token
+	WING							none
+	STRETCHDIBITS					none
+	DIBSECTION						none
+	DIRECTDRAW						none
+
+# DirectDraw specific tokens
+
+
+DIRECTDRAW_DEVICENAME           constant_string
+LPDIRECTDRAWSURFACE             pointer
+
+
+# Tokens for Direct3D driver
+
+
+DIRECT3D_RENDER_METHOD			token
+	DIRECT3D_RAMP                   none
+	DIRECT3D_RGB					none
+	DIRECT3D_HAL					none
+
+
+# Tokens for system configuration
+
+REGISTRY						string
+INI								string
+BRENDER_PATH					string
+BRENDER_DRIVERS					string
+DEFAULT_DEVICE					string
+BRENDER_DEVICES 				string
+BRENDER_DEVELOPER 				boolean
+BRENDER_USE_MMX					boolean
+BRENDER_USE_CMOV                                boolean
+
+# Tokens for host processor info
+#
+INTEL							none
+POWERPC							none
+MIPS							none
+ALPHA							none
+MOTOROLA        				none
+
+INTEL_386						none
+INTEL_486						none
+INTEL_PENTIUM 					none
+INTEL_PENTIUM_PRO				none
+
+
+# Support Z-buffer write modes.
+Z_WRITE						token
+Z_WRITE						token_list
+	Z_WRITE_NEVER				none
+	Z_WRITE_ALWAYS				none
+	Z_WRITE_CONDITIONAL_NO_Z		none
+	Z_WRITE_CONDITIONAL			none
+
+
+# Indicates whether a transparent texturemap is Z transparent.
+ZTRANSPARENCY					boolean
+
+
+# Support for alpha blending modes.
+BLEND_MODE					token
+BLEND_MODE					token_list
+	BLEND_STANDARD				none
+	BLEND_SUMMED				none
+	BLEND_DIMMED				none
+	BLEND_PREMULTIPLIED			none
+	BLEND_CONSTANT				none
+
+# Depth buffer extensions
+D_15						none
+D_31						none
+D_FP15						none
+D_FP16						none
+
+#Alpha extensions
+A_4						none
+
+
+#New Primitives
+VERTEX_SGL                                      none
+VERTEX_DBL                                      none
+TRI_STRIP					none
+TRI_FAN						none
+QUAD_STRIP					none
+
+
+#Interlacing
+INTERLACE                                       boolean
+
+#Dithering
+DITHER                                          boolean
+
+#Complex blender program -- for extra_prim field of material
+BLENDER_PROGRAM                                 pointer
+
+
+# br_device_pixelmap_match extensions.
+#
+DEPTH_15					none
+DEPTH_31					none
+DEPTH_FP15					none
+DEPTH_FP16					none
+
+
+# Extra material extensions.
+SMOOTH_1					boolean
+MAP_HEIGHT_LIMIT_1				token
+MAP_WIDTH_LIMIT_1				token
+COLOUR_MAP_1					object
+TEXTURE_1					object
+DOUBLE_TEXTURE					boolean
+FOG_SCALE					uint_8
+USE_CONSTANT_ALPHA				boolean
+USE_CONSTANT_FOG				boolean
+USE_BACKGROUND_ALPHA				boolean
+MIP_MODIFIER					int_8
+MIP_MIN						uint_8
+MIP_MAX						uint_8
+MIP_MOD_ABSOLUTE				boolean
+
+
+# More blend tokens
+INTENSITY_REDUCTION				none	
+COMPOSITING_WITH_REDUCTION			none
+STANDARD_BLEND					none
+COMPOSITING					none
+COMPOSITING_WITH_INCREASE			none
+
+FOG						boolean

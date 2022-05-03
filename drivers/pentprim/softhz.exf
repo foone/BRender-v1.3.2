@@ -1,0 +1,22 @@
+# List of exported symbols for SOFTHZ.BDD
+# $Id: softhz.exf 1.1 1997/12/10 16:48:28 jon Exp $
+# $Locker: $
+#
+=softhz
+PrimLibWork
+TriangleRenderPIZ2TIPB256_RGB_565
+TriangleRenderPIZ2TIPB256_RGB_555
+TriangleRenderPIZ2TIP256_RGB_555
+TriangleRenderPIZ2TA15
+TriangleRenderPIZ2TIA_RGB_555
+TriangleRenderPIZ2I_RGB_555
+TriangleRenderPIZ2_RGB_555
+
+TriangleRenderPIZ2I_RGB_565
+TriangleRenderPIZ2_RGB_565
+
+TriangleRender_ZT_RGB565_D16_1024
+TriangleRender_ZT_RGB565_D16_256
+TriangleRender_ZT_RGB565_D16_128
+TriangleRender_ZT_RGB565_D16_64
+TriangleRender_ZT_RGB565_D16_32

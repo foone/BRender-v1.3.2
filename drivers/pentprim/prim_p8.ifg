@@ -1,0 +1,13 @@
+# List of primitives, processed by infogen.pl 
+#
+softiz:PointRenderPIZ2TI = [point, z_buffered, index8, texture, interpolated_intensity]
+softiz:PointRenderPIZ2TI = [point, z_buffered, index8, texture, constant_intensity]
+softiz:PointRenderPIZ2T = [point, z_buffered, index8, texture]
+softiz:PointRenderPIZ2 = [point, z_buffered, index8, interpolated_intensity]
+softiz:PointRenderPIZ2 = [point, z_buffered, index8, constant_intensity]
+
+softi:PointRenderPITI = [point, index8, texture, interpolated_intensity]
+softi:PointRenderPITI = [point, index8, texture, constant_intensity]
+softi:PointRenderPIT = [point, index8, texture]
+softi:PointRenderPI = [point, index8, interpolated_intensity]
+softi:PointRenderPI = [point, index8, constant_intensity]

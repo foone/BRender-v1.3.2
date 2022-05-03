@@ -1,0 +1,27 @@
+; FPU control word definitions
+;
+FPU_CW_IC				equ	01000h
+FPU_CW_IC_PROJECTIVE 	equ	00000h
+FPU_CW_IC_AFFINE     	equ	01000h
+
+FPU_CW_RC				equ	00c00h
+FPU_CW_RC_NEAREST		equ	00000h
+FPU_CW_RC_DOWN			equ	00400h
+FPU_CW_RC_UP			equ	00800h
+FPU_CW_RC_CHOP			equ	00c00h
+
+FPU_CW_PC				equ	00300h
+FPU_CW_PC_SINGLE		equ	00000h
+FPU_CW_PC_DOUBLE		equ	00200h
+FPU_CW_PC_EXTENDED		equ	00300h
+
+FPU_CW_IE				equ	00080h
+
+FPU_CW_PM				equ	00020h
+FPU_CW_UM				equ	00010h
+FPU_CW_OM				equ	00008h
+FPU_CW_ZM				equ	00004h
+FPU_CW_DM				equ	00002h
+FPU_CW_IM				equ	00001h
+
+FPU_CW_MASK_ALL			equ 0003fh

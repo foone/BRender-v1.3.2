@@ -1,0 +1,14 @@
+# List of exported symbols for SOFTIZ.BDD
+# $Id: softd.exf 1.1 1997/12/10 16:48:20 jon Exp $
+# $Locker: $
+#
+=softd
+PrimLibWork
+TriangleRenderPIZ2TPD1024
+TriangleRenderPIZ2TPD256
+TriangleRenderPIZ2TPD128
+TriangleRenderPIZ2TPD64
+TriangleRenderPITPD1024
+TriangleRenderPITPD256
+TriangleRenderPITPD128
+TriangleRenderPITPD64

@@ -1,0 +1,14 @@
+# List of exported symbols for SOFTH.BDD
+# $Id: softhlp.exf 1.1 1997/12/10 16:48:25 jon Exp $
+# $Locker: $
+#
+=softh
+PrimLibWork
+LineRenderPIT_RGB_555
+LineRenderPII_RGB_555
+PointRenderPIT_RGB_555
+PointRenderPI_RGB_555
+
+PointRenderPI_RGB_565
+LineRenderPII_RGB_565
+

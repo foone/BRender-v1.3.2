@@ -1,0 +1,35 @@
+# List of exported symbols for SOFTI.BDD
+# $Id: softi.exf 1.1 1997/12/10 16:48:33 jon Exp $
+# $Locker: $
+#
+=softi
+PrimLibWork
+TriangleRender_TID_I8_256
+TriangleRender_TID_I8_256_FLAT
+TriangleRender_TID_I8
+TriangleRender_TID_I8_FLAT
+TriangleRender_PT_I8_32
+TriangleRender_PTI_I8_64
+TriangleRender_PTI_I8_64_FLAT
+TriangleRender_PT_I8_64
+TriangleRender_PTI_I8_128
+TriangleRender_PTI_I8_128_FLAT
+TriangleRender_PT_I8_128
+TriangleRender_PTI_I8_256
+TriangleRender_PTI_I8_256_FLAT
+TriangleRender_PT_I8_256
+TriangleRender_PTI_I8_1024
+TriangleRender_PTI_I8_1024_FLAT
+TriangleRender_PT_I8_1024
+TriangleRender_I8
+TriangleRender_I_I8
+TriangleRender_T_I8
+TriangleRender_TI_I8
+TriangleRender_TI_I8_FLAT
+TriangleRender_TI_I8_256
+TriangleRender_TI_I8_256_FLAT
+TriangleRender_T_I8_1024
+TriangleRender_T_I8_256
+TriangleRender_T_I8_128
+TriangleRender_T_I8_64
+TriangleRender_T_I8_32

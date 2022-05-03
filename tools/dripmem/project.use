@@ -1,0 +1,4 @@
+$(projectdir)/dripmem.c 624e4 1561 3651976c 1.1
+$(projectdir)/dripmem.h 991e 1ce 3651976c 1.1
+$(projectdir)/makefile 8608 1ee 3651976c 1.1
+$(projectdir)/stdmem.c 1d2e0 611 3651976c 1.1

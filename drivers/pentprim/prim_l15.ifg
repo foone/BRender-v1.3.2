@@ -1,0 +1,10 @@
+# List of primitives, processed by infogen.pl 
+#
+softhz:LineRenderPIZ2T_RGB_555 = [line, z_buffered, rgb555, texture]
+softhz:LineRenderPIZ2I_RGB_555 = [line, z_buffered, rgb555, interpolated_colour]
+softhz:LineRenderPIZ2I_RGB_555 = [line, z_buffered, rgb555, constant_colour, duplicate]
+
+softh:LineRenderPIT_RGB_555 = [line, rgb555, texture]
+softh:LineRenderPII_RGB_555 = [line, rgb555, interpolated_colour]
+softh:LineRenderPII_RGB_555 = [line, rgb555, constant_colour, duplicate]
+

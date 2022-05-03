@@ -1,0 +1,12 @@
+BR_SOURCE_DIR	Root of source tree				Required
+BR_MAKE_DIR	Makefile directory				Required
+BR_TARGET_DIR	Target directory				Required
+BR_MAKEFILE	Makefile to use					Required
+
+BR_LONG_ARGS	Use response files for long argument lists	Optional
+BR_LIB_SUFFIX	Extra suffixes for library name			Optional
+
+BR_BUILD	Type of build - DEBUG, RELEASE, PROFILE, TEST	Optional (Default = RELEASE)
+BR_EXTENDER	DOS extender to target				Optional
+
+BR_BASE_TYPE	Type to build library with - FIXED ot FLOAT	Optional (Default = FIXED)

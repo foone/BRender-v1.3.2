@@ -1,0 +1,44 @@
+# Copyright (c) 1993-1995 Argonaut Technologies Limited. All rights reserved.
+#
+# $Id: math_x.afn 1.1 1997/12/10 16:41:18 jon Exp $
+# $Locker: $
+#
+# List of public math functions that need per compiler C<-> ASM glue
+#
+BrFixedAbs
+BrFixedMul
+BrFixedMac2
+BrFixedMac3
+BrFixedMac4
+BrFixedSqr
+BrFixedSqr2
+BrFixedSqr3
+BrFixedSqr4
+BrFixedLength2
+BrFixedLength3
+BrFixedLength4
+BrFixedRLength2
+BrFixedRLength3
+BrFixedRLength4
+BrFixedDiv
+BrFixedDivF
+BrFixedDivR
+BrFixedMulDiv
+BrFixedMac2Div
+BrFixedMac3Div
+BrFixedMac4Div
+BrFixedRcp
+BrFixedFMac2
+BrFixedFMac3
+BrFixedFMac4
+BrFixedSin
+BrFixedCos
+BrFixedASin
+BrFixedACos
+BrFixedATan2
+BrFixedATan2Fast
+BrSqrt
+BrFastSqrt
+BrFastRSqrt
+
+

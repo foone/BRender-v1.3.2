@@ -1,0 +1,8 @@
+# Copyright (c) 1993-1995 Argonaut Technologies Limited. All rights reserved.
+#
+# $Id: v1db_ix.afn 1.1 1997/12/10 16:41:34 jon Exp $
+# $Locker: $
+#
+# List of functions that need per compiler C<-> ASM glue
+#
+

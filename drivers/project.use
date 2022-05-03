@@ -1,0 +1,11 @@
+$(projectdir)/makefile fc39 393 36519700 1.1
+$(projectdir)/3dfx_dos/project.pj 1f0d 55 36519700 1.1
+$(projectdir)/3dfx_win/project.pj 1f15 55 36519704 1.1
+$(projectdir)/ddraw/project.pj 1e05 52 36519706 1.1
+$(projectdir)/mcga/project.pj 1d8b 51 36519708 1.1
+$(projectdir)/myst_win/project.pj 1f6d 55 36519708 1.1
+$(projectdir)/pentprim/project.pj 1f62 55 3651970a 1.1
+$(projectdir)/rage_win/project.pj 1f3f 55 36519710 1.1
+$(projectdir)/s3_win/project.pj 1e46 53 36519712 1.1
+$(projectdir)/softrend/project.pj 1f58 55 36519714 1.1
+$(projectdir)/vesa/project.pj 1da2 51 36519718 1.1

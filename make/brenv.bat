@@ -1,0 +1,16 @@
+set BR_SOURCE_DIR=%_CWD%
+if X%1 != X set BR_SOURCE_DIR=%1
+
+set BR_MAKE_DIR=%BR_SOURCE_DIR%\make
+set BR_TARGET_DIR=%BR_SOURCE_DIR%
+
+set BRENDER_PATH=%BR_SOURCE_DIR%\dat;%BR_SOURCE_DIR%\dll;%BR_SOURCE_DIR%\misc_dat
+
+rem set BR_LONG_ARGS=1
+set BR_BUILD=DEBUG
+set BR_BASE_TYPE=FIXED
+
+rem set BR_MAKEFILE=watcom.mak
+rem set BR_EXTENDER=DOS4GW
+rem set MAKESTARTUP=c:\startup.mk
+

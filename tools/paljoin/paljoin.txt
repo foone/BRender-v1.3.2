@@ -1,0 +1,34 @@
+;Usage: PalJoin <input-text-file> <output-palette>
+;
+;This utility is designed to allow you to construct a new palette out of bits
+;of existing palettes.
+;
+;Empty lines in the input file, or lines begining with # or ; will be ignored.
+;
+;A valid line in the input file will contain the following delimited by space,
+;tab or comma:
+;        <string> : Palette file name.
+;        <number> : Source Index-Base - where to start reading colours from.
+;        <number> : Index-Range - number of colours to copy.
+;        <number> : Destination Index-Base - where to start writing colours to.
+;
+;Example:
+;std.pal 0 64 192
+;
+; - Copies first 64 colours from std.pal to last 64 colours of output.
+;
+;The output file will be written once every line of the input file has been
+;processed.
+;
+; TRY USING THE FOLLOWING COMMAND LINE:
+; PALJOIN PALJOIN.TXT OUT.PAL
+; OR JUST TYPING PALJOIN FOR A DESCRIPTION
+;
+; This example is for the merging of palette containing 128 strip colours in its
+; lower half with a pallete containing 128 texture colours in its upper half.
+; Lines begining with ; or # will be treated as comments. Blank lines will be
+; ignored. (Range is a count, starting at a Base value, rather than a maximum.)
+
+#File           sourceIndexBase     Range     destinationIndexBase
+strip.pal       0                   128       0
+texture.pal     128                 128       128

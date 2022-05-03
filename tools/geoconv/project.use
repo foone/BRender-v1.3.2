@@ -1,0 +1,8 @@
+$(projectdir)/brbhook.c f1ff 31a 3651971c 1.1
+$(projectdir)/geoconv.c 4839ad fc2f 3651971c 1.4
+$(projectdir)/irit.c 1af20 5c0 3651971c 1.1
+$(projectdir)/makefile 123e5 460 3651971c 1.2
+$(projectdir)/oldmodel.h 2f110 99a 3651971c 1.1
+$(projectdir)/save3ds.c 388cc be5 3651971c 1.1
+$(projectdir)/save_c.c 3524c b8b 3651971c 1.1
+$(projectdir)/std.pal 13664 443 3651971c 1.1

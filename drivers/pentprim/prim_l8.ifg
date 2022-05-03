@@ -1,0 +1,14 @@
+# List of primitives, processed by infogen.pl 
+#
+softiz:LineRenderPIZ2TI = [line, z_buffered, index8, texture, interpolated_intensity]
+softiz:LineRenderPIZ2TI = [line, z_buffered, index8, texture, constant_intensity, duplicate]
+softiz:LineRenderPIZ2T = [line, z_buffered, index8, texture]
+softiz:LineRenderPIZ2I = [line, z_buffered, index8, interpolated_intensity]
+softiz:LineRenderPIZ2I = [line, z_buffered, index8, constant_intensity, duplicate]
+
+softi:LineRenderPITI = [line, index8, texture, interpolated_intensity]
+softi:LineRenderPITI = [line, index8, texture, constant_intensity, duplicate]
+softi:LineRenderPIT = [line, index8, texture]
+softi:LineRenderPII = [line, index8, interpolated_intensity]
+softi:LineRenderPII = [line, index8, constant_intensity, duplicate]
+

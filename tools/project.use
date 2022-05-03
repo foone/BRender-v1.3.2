@@ -1,0 +1,16 @@
+$(projectdir)/makefile fb72 38f 3651971a 1.2
+$(projectdir)/3ds2br/project.pj 1d35 51 3651971a 1.1
+$(projectdir)/dquery/project.pj 1dbf 51 3651971a 1.1
+$(projectdir)/dripmem/project.pj 1e13 52 3651976c
+$(projectdir)/geoconv/project.pj 1e16 52 3651971c 1.1
+$(projectdir)/mkblend/project.pj 1e02 52 3651971c 1.1
+$(projectdir)/mkfog/project.pj 1d39 50 3651971c 1.1
+$(projectdir)/mkranges/project.pj 1e7d 53 3651971c 1.1
+$(projectdir)/mkshades/project.pj 1e75 53 3651971c 1.1
+$(projectdir)/modtest/project.pj 1e25 52 3651971c 1.1
+$(projectdir)/paljoin/project.pj 1e12 52 3651971c 1.1
+$(projectdir)/testview/project.pj 1ea0 53 3651971c 1.1
+$(projectdir)/texconv/project.pj 1e2c 52 3651971c 1.1
+$(projectdir)/timetest/project.pj 1e94 53 3651971e 1.1
+$(projectdir)/trackmem/project.pj 1e79 53 3651971e 1.1
+$(projectdir)/viewpal/project.pj 1e1d 52 3651971e 1.1

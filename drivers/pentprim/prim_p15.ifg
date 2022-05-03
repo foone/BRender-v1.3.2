@@ -1,0 +1,10 @@
+# List of primitives, processed by infogen.pl 
+#
+softhz:PointRenderPIZ2T_RGB_555 = [point, z_buffered, rgb555, texture]
+softhz:PointRenderPIZ2_RGB_555 = [point, z_buffered, rgb555, interpolated_colour]
+softhz:PointRenderPIZ2_RGB_555 = [point, z_buffered, rgb555, constant_colour]
+
+softh:PointRenderPIT_RGB_555 = [point, rgb555, texture]
+softh:PointRenderPI_RGB_555 = [point, rgb555, interpolated_colour]
+softh:PointRenderPI_RGB_555 = [point, rgb555, constant_colour]
+

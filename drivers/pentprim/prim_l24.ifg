@@ -1,0 +1,10 @@
+# List of primitives, processed by infogen.pl 
+#
+softtz:LineRenderPIZ2T_RGB_888 = [line, z_buffered, rgb888, texture]
+softtz:LineRenderPIZ2I_RGB_888 = [line, z_buffered, rgb888, interpolated_colour]
+softtz:LineRenderPIZ2I_RGB_888 = [line, z_buffered, rgb888, constant_colour, duplicate]
+
+softt:LineRenderPIT_RGB_888 = [line, rgb888, texture]
+softt:LineRenderPII_RGB_888 = [line, rgb888, interpolated_colour]
+softt:LineRenderPII_RGB_888 = [line, rgb888, constant_colour, duplicate]
+

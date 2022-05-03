@@ -1,0 +1,63 @@
+{{}} Copyright (c) 1996 Argonaut Software Ltd. All rights reserved.
+{{}}
+{{}} A template for demo makefiles
+{{}}
+{{}} $Id: makefile.bcc 1.1 1997/12/10 16:43:24 jon Exp $
+{{}} $Locker: $
+{{}}
+# Makefile for Borland C++ 4.5 + Powerpack
+#
+TARGET={{target}}.exe
+
+!ifndef BASE_DIR
+BASE_DIR=..\..\..
+!endif
+
+# Borland, Float, Release
+#
+LIB_TYPE=bfr
+LIB_TYPE_NB=br
+LIB_TYPE_EX=ppbr
+BASED=FLOAT
+
+# Borland, Fixed, Release
+#
+#LIB_TYPE=bxr
+#LIB_TYPE_NB=br
+#LIB_TYPE_EX=ppbr
+#BASED=FIXED
+
+OBJS=\
+	{{object_c}}.obj\
+	{{object_cpp}}.obj\
+	{{object_asm}}.obj\
+
+LIBS=\
+	{{library}}.lib\
+
+# Default rules
+#
+(?object_c?}CC=bcc32
+(?object_c?}CFLAGS=-c -a4  -DBASED_$(BASED)=1 -I$(BASE_DIR)\inc
+(?object_c?}
+(?object_c?}.c.obj:
+(?object_c?}	$(CC) $(CFLAGS) $<
+(?object_c?}
+(?object_cpp?}CPPC=$(CC)
+(?object_cpp?}CPPFLAGS=-c -a4  -DBASED_$(BASED)=1 -I$(BASE_DIR)\inc
+(?object_cpp?}
+(?object_cpp?}.cpp.obj:
+(?object_cpp?}	$(CPPC) $(CPPCFLAGS) $<
+(?object_cpp?}
+LD=tlink32
+LDFLAGS=-Tpe -ax -v
+
+# Build executable
+#
+$(TARGET): $(OBJS)
+	$(LD) $(LDFLAGS) @&&!
+c0x32.obj $(OBJS)
+$(TARGET)
+$*
+dpmi32.lib cw32.lib $(LIBS)
+!
