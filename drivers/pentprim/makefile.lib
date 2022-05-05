@@ -1,3 +1,115 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b23e7d890c24248746c10cbc92d0705292cbeba63f605b20c05d2ca4d7f92855
-size 2474
+# Copyright (c) 1993-1995 Argonaut Technologies Limited. All rights reserved.
+#
+# $Id: makefile.lib 1.1 1997/12/10 16:47:16 jon Exp $
+# $Locker: $
+#
+# Makefile for BRender Software primitives driver
+#
+.IMPORT: BR_SOURCE_DIR BR_MAKEFILE BR_TARGET_DIR BR_MAKE_DIR
+
+TARGET_TYPE*:=LIB
+
+LIB_INC:=drv
+
+.IF $(TARGET_TYPE) == LIB
+
+BLD_BASE:=lib
+LIB_PART:=prim
+CFLAGS=-DBrDrv1Begin=BrDrv1SoftPrimBegin
+
+.ELIF $(TARGET_TYPE) == DRIVER
+
+BLD_BASE:=drv
+TARGET:=softprim.dll
+CFLAGS+=
+LDLIBS+=\
+	$(DDI_LIB_DIR)/fwimg$(LIB_SUFFIX_C)$(LIB_EXT)\
+	$(LIB_DIR)/brmt$(LIB_TYPE)$(LIB_EXT)\
+
+.ENDIF
+
+CFLAGS+=-DPARTS=0xffff -DAUTOLOAD=0
+ASFLAGS+=-DPARTS=0ffffh -DAUTOLOAD=0
+
+## Base library object files
+##
+OBJS_C=\
+	$(BLD_DIR)/driver$(OBJ_EXT)\
+	$(BLD_DIR)/device$(OBJ_EXT)\
+	$(BLD_DIR)/object$(OBJ_EXT)\
+	$(BLD_DIR)/plib$(OBJ_EXT)\
+	$(BLD_DIR)/pstate$(OBJ_EXT)\
+	$(BLD_DIR)/sbuffer$(OBJ_EXT)\
+	$(BLD_DIR)/match$(OBJ_EXT)\
+	$(BLD_DIR)/work$(OBJ_EXT)\
+\
+	$(BLD_DIR)/frcp$(OBJ_EXT)\
+	$(BLD_DIR)/rcp$(OBJ_EXT)\
+	$(BLD_DIR)/dither$(OBJ_EXT)\
+\
+	$(BLD_DIR)/awtmz$(OBJ_EXT)\
+	$(BLD_DIR)/decalz$(OBJ_EXT)\
+	$(BLD_DIR)/l_piz$(OBJ_EXT)\
+	$(BLD_DIR)/p_piz$(OBJ_EXT)\
+	$(BLD_DIR)/perspz$(OBJ_EXT)\
+\
+	$(BLD_DIR)/awtm$(OBJ_EXT)\
+	$(BLD_DIR)/decal$(OBJ_EXT)\
+	$(BLD_DIR)/l_pi$(OBJ_EXT)\
+	$(BLD_DIR)/p_pi$(OBJ_EXT)\
+	$(BLD_DIR)/persp$(OBJ_EXT)\
+
+OBJS_ASM=\
+	$(BLD_DIR)/magicsym$(OBJ_EXT)\
+	$(BLD_DIR)/safediv$(OBJ_EXT)\
+	$(BLD_DIR)/sar16$(OBJ_EXT)\
+\
+	$(BLD_DIR)/t_piza$(OBJ_EXT)\
+	$(BLD_DIR)/ti8_piz$(OBJ_EXT)\
+	$(BLD_DIR)/ti8_pizp$(OBJ_EXT)\
+	$(BLD_DIR)/t15_pizp$(OBJ_EXT)\
+	$(BLD_DIR)/tt15_piz$(OBJ_EXT)\
+        $(BLD_DIR)/tt16_piz$(OBJ_EXT)\
+	$(BLD_DIR)/tt24_piz$(OBJ_EXT)\
+\
+	$(BLD_DIR)/t_pia$(OBJ_EXT)\
+	$(BLD_DIR)/ti8_pi$(OBJ_EXT)\
+	$(BLD_DIR)/ti8_pip$(OBJ_EXT)\
+	$(BLD_DIR)/t15_pip$(OBJ_EXT)\
+	$(BLD_DIR)/tt15_pi$(OBJ_EXT)\
+        $(BLD_DIR)/tt16_pi$(OBJ_EXT)\
+	$(BLD_DIR)/tt24_pi$(OBJ_EXT)\
+\
+        $(BLD_DIR)/zb8$(OBJ_EXT)\
+        $(BLD_DIR)/zs8$(OBJ_EXT)\
+        $(BLD_DIR)/fti8_piz$(OBJ_EXT)\
+        $(BLD_DIR)/fpsetup$(OBJ_EXT)\
+
+
+XOBJS_C=\
+
+XOBJS_ASM=\
+
+PRIM_FILES=\
+	prim_l15.c\
+	prim_l16.c\
+	prim_l24.c\
+	prim_l8.c\
+	prim_p15.c\
+	prim_p16.c\
+	prim_p24.c\
+	prim_p8.c\
+	prim_t15.c\
+	prim_t16.c\
+	prim_t24.c\
+	prim_t8.c\
+
+.INCLUDE: $(BR_MAKE_DIR)/$(BR_MAKEFILE)
+
+# Build primitive info tables from a script
+#	
+$(PRIM_FILES): infogen.pl
+
+%.c: %.ifg
+	$(PERL) infogen.pl $< > $@
+
